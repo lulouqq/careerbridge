@@ -1,77 +1,111 @@
-# CareerBridge
+# 🚀 CareerBridge
 
-CareerBridge is a web-based Internship Management System developed as part of the CSIT128 Assignment 2 at the University of Wollongong in Dubai. It connects students looking for internships with companies offering opportunities.
+CareerBridge is a full-stack internship management platform that connects students with companies offering internship opportunities.
 
-## Project Overview
+It allows students to apply for internships and track their applications, while companies can post positions and manage candidates.
 
-This project allows two types of users:
+---
 
-* Students: Can register, log in, create and edit profiles, browse internships, apply for them, and track application status.
-* Companies: Can register, log in, post internship listings, view and manage student applications, and update their account information.
+## 🧩 Features
 
-## Key Features
+### 👨‍🎓 Student Side
+- Registration and login
+- Profile creation and editing
+- Resume upload
+- Internship search and filtering
+- Application submission
+- Application status tracking
 
-Student Side:
+### 🏢 Company Side
+- Registration and login
+- Create, edit, and delete internship listings
+- View and manage student applications
+- Update application status (Pending / Accepted / Rejected)
+- Company profile management
 
-* Student registration and login
-* Profile editing (name, email, university, skills, password)
-* Resume upload
-* Internship search and filtering
-* Application submission and status tracking
+---
 
-Company Side:
+## 🛠 Tech Stack
 
-* Company registration and login
-* Internship creation, editing, and deletion
-* Viewing and managing student applications
-* Changing application status (Pending, Accepted, Rejected)
-* Company profile editing
+**Frontend**
+- HTML5
+- CSS3
+- JavaScript
 
-## Technologies Used
+**Backend**
+- Node.js
+- Express.js
 
-* Frontend: HTML5, CSS3, JavaScript
-* Backend: Node.js with Express.js
-* Database: MySQL
-* File Uploads: Multer
-* Middleware: Body-parser
-* Security: (bcrypt planned for future) + basic validation
+**Database**
+- MySQL
 
-## Database Structure
+**Other Tools**
+- Multer (file uploads)
+- Git & GitHub
 
-* students: ID, name, email, password, university, skills, resume
-* companies: ID, name, email, password, description
-* internships: ID, company\_id, title, description, requirements, location, duration, posted\_at
-* applications: ID, student\_id, internship\_id, status (Pending / Accepted / Rejected)
+---
 
-All tables are connected with foreign keys and use ON DELETE CASCADE for referential integrity.
+## 🏗 Architecture
 
-## How to Run
+Frontend → Express Server → MySQL Database
 
-1. Install Node.js and MySQL if not already installed.
-2. Clone this repository or extract the ZIP file.
-3. Set up the database:
+- Client-side pages handle UI and user interaction
+- Express.js handles routing, authentication, and business logic
+- MySQL stores users, internships, and applications
 
-   * Open MySQL
-   * Run the provided .sql script to create the database and tables.
-4. Install project dependencies:
-   npm install
-5. Start the server:
-   node server.js
-6. Open your browser and go to:
-   [http://localhost:8080](http://localhost:8080)
+---
 
-## Team Members
+## ⚙️ How to Run
 
-* Nikita Veliev — Developer (CSS, HTML, full-stack support)
-* Ivan Odnolov — Developer (JavaScript, Node.js, SQL, HTML)
-* Feliks Gumennyy — Developer, Report & Presentation Lead
+1. Install dependencies:
+npm install
 
-## Notes
+2. Start the server:
+node server.js
 
-* This project was developed for academic purposes.
-* Some entries in the database are test values and meant for demonstration.
-* Passwords are currently stored in plaintext (bcrypt integration is planned).
+Open in browser:
+http://localhost:8080
 
-## Contact
+---
 
-For any questions or feedback, please reach out via university communication channels.
+## 🗄 Database
+
+The system includes the following core tables:
+- students
+- companies
+- internships
+- applications
+
+All relationships are managed using foreign keys with cascade deletion.
+
+---
+
+## 🔐 Security
+
+- Passwords are hashed using bcrypt
+- Basic validation implemented for forms and user input
+
+---
+
+## 📂 Project Structure
+
+careerbridge/
+├── public/        # CSS, JS, images
+├── views/         # HTML pages
+├── database/      # SQL scripts
+├── server.js      # main server
+├── package.json
+
+---
+
+## 👥 Team
+
+- Nikita Veliev — Full-stack development, Backend logic, database, Node.js, integration
+- Ivan Odnolov —  Frontend development, database, JS
+
+---
+
+## 📌 Notes
+
+- This project was developed as part of a university assignment
+- Some data is for demonstration purposes only
