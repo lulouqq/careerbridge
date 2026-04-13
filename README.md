@@ -88,14 +88,14 @@ All relationships are managed using foreign keys with cascade deletion.
 ---
 
 ## 📂 Project Structure
-
+```
 careerbridge/
 ├── public/        # CSS, JS, images
 ├── views/         # HTML pages
 ├── database/      # SQL scripts
 ├── server.js      # main server
 ├── package.json
-
+```
 ---
 
 ## 👥 Team
