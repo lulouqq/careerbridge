@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"> <!-- Set page encoding -->
+  <title>CareerBridge – Company Dashboard</title> <!-- Page title -->
+  <link rel="stylesheet" href="/css/dashboard.css"> <!-- Link to CSS -->
+</head>
+
+<body>
+  <header>
+    <div class="nav-header">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="CareerBridge Logo"> <!-- Logo image -->
+        <h1>CareerBridge</h1>
+      </div>
+      <nav>
+        <a id="profile_link">View Profile</a> <!-- Profile page -->
+        <a id="internships_link">Manage Internships</a> <!-- Internship management -->
+        <a href="/">Log Out</a> <!-- Logout -->
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="welcome-section">
+      <h2>Company Dashboard</h2>
+      <p id="hello_text">Hello, </p> <!-- Company name will appear here -->
+      <p id="email_text">Email: </p> <!-- Company email will appear here -->
+    </div>
+
+    <div class="applications-section">
+      <h3>Received Applications</h3>
+      <div id="applications-container">
+        <p class="loading">Loading applications</p> <!-- Placeholder text -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CareerBridge. All rights reserved.</p> <!-- Footer info -->
+  </footer>
+
+  <script src="/js/company_dashboard.js"></script> <!-- JavaScript file -->
+</body>
+
+</html>

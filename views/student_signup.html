@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"> <!-- Page encoding -->
+  <title>Student Sign Up – CareerBridge</title> <!-- Page title -->
+  <link rel="stylesheet" href="css/student_signup.css"> <!-- CSS file -->
+</head>
+
+<body>
+
+  <!-- Header with site name -->
+  <header>
+    <h1>CareerBridge</h1>
+  </header>
+
+  <main>
+    <h2>Student Sign Up</h2>
+
+    <!-- Registration form for students -->
+    <form action="/register-student" method="POST" enctype="multipart/form-data">
+
+      <!-- Full name input -->
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <!-- Email input -->
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br><br>
+
+      <!-- Password input with validation pattern -->
+      <label for="password">Password (minimum eight characters, at least one upper case English letter, one lower case
+        letter, one number and one special character):</label><br>
+      <input type="password" id="password" name="password" required
+        pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"><br><br>
+
+      <!-- University name input -->
+      <label for="university">University:</label><br>
+      <input type="text" id="university" name="university" required><br><br>
+
+      <!-- Skills input -->
+      <label for="skills">Skills (comma-separated):</label><br>
+      <input type="text" id="skills" name="skills" required><br><br>
+
+      <!-- Resume upload -->
+      <label for="resume">Upload Resume:</label><br>
+      <input type="file" id="resume" name="resume"><br><br>
+
+      <!-- Area to show error messages -->
+      <div id="error" style="color: red; margin-top: 10px;"></div>
+
+      <!-- Submit button -->
+      <button type="submit">Register</button>
+    </form>
+
+    <!-- Link to login page -->
+    <p>Already have an account? <a href="/student_login">Login here</a>.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 CareerBridge</p>
+  </footer>
+
+  <!-- JavaScript for signup logic -->
+  <script src="/js/student_signup.js"></script>
+
+</body>
+
+</html>

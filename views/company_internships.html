@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"> <!-- Page encoding -->
+  <title>Company Internships</title> <!-- Page title -->
+  <link rel="stylesheet" href="/css/company_internships.css"> <!-- Link to CSS -->
+</head>
+
+<body>
+  <header>
+    <div class="nav-header">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="CareerBridge Logo"> <!-- Logo -->
+        <h1>CareerBridge</h1>
+      </div>
+      <nav>
+        <a id="back_to_dashboard">← Back to Dashboard</a> <!-- Link to dashboard -->
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Company Internships</h1>
+
+    <!-- Form to add a new internship -->
+    <h2>Add New Internship</h2>
+    <div id="message-box"></div> <!-- Area for success/error messages -->
+
+    <form action="/add-internship" method="POST">
+      <!-- Hidden fields to include company info -->
+      <input type="hidden" name="company_id" id="company_id">
+      <input type="hidden" name="c_name" id="c_name">
+      <input type="hidden" name="c_email" id="c_email">
+      <input type="hidden" name="c_description" id="c_description">
+
+      <!-- Internship form inputs -->
+      <input type="text" name="title" placeholder="Title" required><br>
+      <textarea name="description" placeholder="Description" required></textarea><br>
+      <textarea name="requirements" placeholder="Requirements"></textarea><br>
+      <input type="text" name="location" placeholder="Location"><br>
+      <input type="text" name="duration" placeholder="Duration"><br>
+      <button type="submit">Post Internship</button> <!-- Submit button -->
+    </form>
+
+    <!-- Section for displaying existing internships -->
+    <h2 id="company-internships-name"></h2>
+    <div id="internship-list"></div> <!-- List of posted internships -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CareerBridge. All rights reserved.</p> <!-- Footer -->
+  </footer>
+
+  <script src="/js/company_internships.js"></script> <!-- JavaScript file -->
+</body>
+
+</html>

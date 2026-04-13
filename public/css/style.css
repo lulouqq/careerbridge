@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-section img {
+    height: 60px;
+}
+
+.logo-section h1 {
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-section {
+    flex: 1;
+    max-width: 500px;
+}
+
+.text-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    margin-bottom: 15px;
+}
+
+.features-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.features-section h2 {
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature {
+    flex: 1;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature-illustration {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.stats-section {
+    margin-bottom: 60px;
+    background-color: #2c3e50;
+    padding: 40px 0;
+    color: white;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.button-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.button-section h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.button-section p {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.paths-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.path {
+    flex: 1;
+    max-width: 400px;
+}
+
+.path-description {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.path-description h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.path-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.path-description li {
+    margin: 10px 0;
+    color: #666;
+    padding-left: 20px;
+    position: relative;
+}
+
+.path-description li:before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.student-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.student-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.company-btn {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.company-btn:hover {
+    background-color: #1a252f;
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.contact-section h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    color: #333;
+    font-size: 1.1rem;
+}

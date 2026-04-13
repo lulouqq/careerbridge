@@ -1,0 +1,22 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Nikita Veliev & Ivan Odnovol",
+  "license": "MIT",
+  "description": "Internship Management System built for UOWD Group Project, 2025",
+  "dependencies": {
+    "alert": "^6.0.2",
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "mysql2": "^3.14.1",
+    "node-notifier": "^10.0.1"
+  }
+}

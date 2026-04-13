@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"> <!-- Set encoding -->
+  <title>Company Sign Up – CareerBridge</title> <!-- Page title -->
+  <link rel="stylesheet" href="css/company_signup.css"> <!-- CSS file -->
+</head>
+
+<body>
+
+  <!-- Header with site title -->
+  <header>
+    <h1>CareerBridge</h1>
+  </header>
+
+  <main>
+    <h2>Company Sign Up</h2>
+
+    <!-- Registration form for companies -->
+    <form action="/register-company" method="POST">
+      <!-- Company name -->
+      <label for="name">Company Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <!-- Company email -->
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br><br>
+
+      <!-- Password with validation rules -->
+      <label for="password">Password (minimum eight characters, at least one upper case English letter, one lower case
+        letter, one number and one special character):</label><br>
+      <input type="password" id="password" name="password" required
+        pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"><br><br>
+
+      <!-- Company description -->
+      <label for="description">Short Description:</label><br>
+      <input type="text" id="description" name="description" required><br><br>
+
+      <!-- Area to show error messages -->
+      <div id="error" style="color: red; margin-top: 10px;"></div>
+
+      <button type="submit">Register</button> <!-- Submit button -->
+    </form>
+
+    <!-- Link to login page -->
+    <p>Already have an account? <a href="/company_login">Login here</a>.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 CareerBridge</p>
+  </footer>
+
+  <script src="/js/company_signup.js"></script> <!-- JavaScript file -->
+
+</body>
+
+</html>

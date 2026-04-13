@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"> <!-- Set encoding -->
+  <title>CareerBridge – Company Profile</title> <!-- Page title -->
+  <link rel="stylesheet" href="/css/profile.css"> <!-- CSS file -->
+</head>
+
+<body>
+
+  <!-- Header with logo and navigation -->
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="CareerBridge Logo">
+      <h1>CareerBridge</h1>
+    </div>
+    <nav>
+      <a id="back_to_dashboard">← Back to Dashboard</a>
+      <a href="/">Log Out</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Company Profile</h2>
+
+    <div class="profile-container">
+      <!-- Left section with illustration and info -->
+      <aside class="settings-section">
+        <div class="settings-illustration">
+          <img src="images/settings.jpg" alt="Profile Settings Illustration">
+        </div>
+        <div class="settings-content">
+          <h3>Company Profile Management</h3>
+          <p>Update your company info to attract top talent.</p>
+        </div>
+      </aside>
+
+      <!-- Main profile edit section -->
+      <div class="profile-main">
+        <div class="profile-section">
+          <!-- Name -->
+          <p><strong>Name:</strong> <span id="display-name"></span></p>
+          <div id="edit-name-section" style="display: none;">
+            <form action="/update-company-name" method="POST">
+              <input type="hidden" name="id" id="name-id">
+              <input type="text" name="name" id="edit-name-input">
+              <button type="submit">Save</button>
+            </form>
+          </div>
+          <button onclick="toggleEdit('name')">Edit</button>
+
+          <!-- Email -->
+          <p><strong>Email:</strong> <span id="display-email"></span></p>
+          <div id="edit-email-section" style="display: none;">
+            <form action="/update-company-email" method="POST">
+              <input type="hidden" name="id" id="email-id">
+              <input type="text" name="email" id="edit-email-input"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+              <button type="submit">Save</button>
+            </form>
+          </div>
+          <button onclick="toggleEdit('email')">Edit</button>
+
+          <!-- Description -->
+          <p><strong>Description:</strong> <span id="display-description"></span></p>
+          <div id="edit-description-section" style="display: none;">
+            <form action="/update-company-description" method="POST">
+              <input type="hidden" name="id" id="description-id">
+              <input type="text" name="description" id="edit-description-input">
+              <button type="submit">Save</button>
+            </form>
+          </div>
+          <button onclick="toggleEdit('description')">Edit</button>
+
+          <!-- Password -->
+          <p><strong>Password (must meet security rules):</strong> ********</p>
+          <div id="edit-password-section" style="display: none;">
+            <form action="/update-company-password" method="POST">
+              <input type="hidden" name="id" id="password-id">
+              <input type="password" name="password" placeholder="New password"
+                pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$">
+              <button type="submit">Save</button>
+            </form>
+          </div>
+          <button onclick="toggleEdit('password')">Change Password</button>
+        </div>
+
+        <div id="message-box"></div> <!-- Success or error messages -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CareerBridge. All rights reserved.</p> <!-- Footer -->
+  </footer>
+
+  <script src="/js/company_profile.js"></script> <!-- JavaScript file -->
+</body>
+
+</html>

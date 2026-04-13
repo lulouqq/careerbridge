@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"> <!-- Set encoding -->
+  <title>CareerBridge – Student Dashboard</title> <!-- Page title -->
+  <link rel="stylesheet" href="/css/dashboard.css"> <!-- Dashboard CSS -->
+</head>
+
+<body>
+
+  <!-- Header with logo and navigation -->
+  <header>
+    <div class="nav-header">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="CareerBridge Logo"> <!-- Logo image -->
+        <h1>CareerBridge</h1>
+      </div>
+      <nav>
+        <a id="profile_link">View Profile</a> <!-- Go to profile page -->
+        <a id="internships_link">View Internships</a> <!-- See available internships -->
+        <a href="/">Log Out</a> <!-- Log out -->
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Welcome message -->
+    <div class="welcome-section">
+      <h2>Student Dashboard</h2>
+      <p id="hello_text">Hello, </p> <!-- Student's name will appear here -->
+      <p id="email_text">Email: </p> <!-- Student's email will appear here -->
+    </div>
+
+    <!-- Applications section -->
+    <div class="applications-section">
+      <h3>Your Applications</h3>
+      <div id="applications-list">
+        <p class="loading">Loading your applications</p> <!-- Placeholder while data loads -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 CareerBridge. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript file for dynamic behavior -->
+  <script src="/js/student_dashboard.js"></script>
+
+</body>
+
+</html>
