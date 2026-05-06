@@ -1,3 +1,4 @@
+require('dotenv').config();
 // Importing required libraries (modules)
 const express = require('express');           // Web framework for building the server
 const bodyParser = require('body-parser');   // Helps parse data from HTML forms
@@ -14,10 +15,10 @@ const port = 8080;
 
 // Set up MySQL connection details
 const db = mysql.createConnection({
-    host: 'localhost',             // Database server location (localhost = this computer)
-    user: 'root',                  // Username to access the database
-    password: '12345678',          // Password for the database user
-    database: 'careerbridge_db'    // Name of the database we want to connect to
+    host: process.env.DB_HOST,            // Database server location (localhost = this computer)
+    user: process.env.DB_USER,                 // Username to access the database
+    password: process.env.DB_PASSWORD,         // Password for the database user
+    database: process.env.DB_NAME  // Name of the database we want to connect to
 });
 
 // Try to connect to the database
